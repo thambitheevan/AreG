@@ -1,0 +1,28 @@
+/*
+Author 
+This library contains the following functions to be used:
+Location Class:
+ - has two attributes, latitude and longitude
+periNode Class:
+ - Has three attributes as a doubly linked list of locations
+
+>>fDistance(loc1,loc2)
+returns the distance in meters between two loc classes
+
+>>cPos(mypos,locArray,distance) 
+returns an array of Location class for all locations within distance of mypos(as location)
+
+>>bPerim(locArray)
+returns a list of perionodes as the perimeter of the locArrary of locations
+USE THIS for any function requiring a perimeter build of a locArrary
+
+
+>>nlocArray(locarray,distance)
+returns a new locarray of locations where the perimeter created by locarry is expanded by distance(can be negative or positive)
+
+>>cPeridistance(perimeter)
+Returns the distance[[m] of the perimeter passed
+
+>>areaNpoly(perimeter)
+returns a area[m^2]  of the perimeter passed
+*/
