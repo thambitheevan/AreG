@@ -85,8 +85,8 @@ function fgeoMid(locarray){
   Zsum = Zsum / locarray.length
 
   var retLoc = new Location()
-  retLoc.longitude = Math.atan2(Ysum,Xsum)*180/Math.PI;
-  retLoc.latitude = Math.atan2(Zsum,Math.sqrt(Xsum*Xsum + Ysum * Ysum)) * 180/Math.PI;
+  retLoc.latitude = Math.atan2(Ysum,Xsum)*180/Math.PI;
+  retLoc.longitude = Math.atan2(Zsum,Math.sqrt(Xsum*Xsum + Ysum * Ysum)) * 180/Math.PI;
   return retLoc
 };
 function clocDrad(location){
@@ -118,8 +118,8 @@ Y += vector[1]*roughRad;
 Z += vector[2]*roughRad;
 
 var retLoc = new Location()
-retLoc.longitude = Math.atan2(Y,X)*180/Math.PI;
-retLoc.latitude = Math.atan2(Z,Math.sqrt(X*X + Y*Y)) * 180/Math.PI;
+retLoc.latitude = Math.atan2(Y,X)*180/Math.PI;
+retLoc.longitude = Math.atan2(Z,Math.sqrt(X*X + Y*Y)) * 180/Math.PI;
 return retLoc
 };
 
@@ -163,3 +163,20 @@ function locTcart(location){
   var [lon,lat] = clocDrad(location)
   return [Math.cos(lat)*Math.cos(lon),Math.cos(lat)*Math.sin(lon)];
 };
+
+
+function getCloc(locarray){
+//Returns the comma seperated list of longitude latitude for a locarray
+  var retString = "";
+  for(loc of locarry){
+    
+    retString += "," + loc.longitude + "," + loc.latitude;
+  };
+  return retString
+};
+const loc1 = new Location(43.770967, -79.260767)
+const loc2 = new Location(43.771038, -79.260805)
+const loc3 = new Location(43.771071, -79.260675)
+const loc4 = new Location(43.770999, -79.260639)
+
+var locarry = [loc1,loc2,loc3,loc4]
