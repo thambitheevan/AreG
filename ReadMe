@@ -25,4 +25,8 @@ Returns the distance[[m] of the perimeter passed
 
 >>areaNpoly(perimeter)
 returns a area[m^2]  of the perimeter passed
+
+
+>>function getCloc(locarray)
+returns a string ",long1,lat1,long2,lat2,.....,lonn,latn"
 */
